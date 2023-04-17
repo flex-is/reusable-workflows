@@ -1,17 +1,15 @@
 name: Auto Assign
 on:
     workflow_call:
-        inputs:
-            config_file:
-                default: .github/auto-assign.yaml
-                required: false
-                type: string
 
 jobs:
-    run:
+    auto-assign:
         runs-on: ubuntu-latest
         steps:
-            - uses: wow-actions/auto-assign@v1
+            - uses: wow-actions/auto-assign@v3
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                CONFIG_FILE: ${{ inputs.config_file }}
+                reviewers: |
+                    miskovicm
+                numberOfReviewers: 1
+                skipKeywords: wip, draft
