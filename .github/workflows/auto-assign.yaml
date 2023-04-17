@@ -9,7 +9,7 @@ jobs:
             - uses: wow-actions/auto-assign@v3
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                reviewers: |
-                    miskovicm
+                reviewers: miskovicm
                 numberOfReviewers: 1
+                numberOfAssignees: 1
                 skipKeywords: wip, draft
