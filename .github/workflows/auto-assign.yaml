@@ -10,6 +10,7 @@ jobs:
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 reviewers: miskovicm
+                assigness: miskovicm
                 numberOfReviewers: 1
                 numberOfAssignees: 1
                 skipKeywords: wip, draft
